@@ -1,0 +1,55 @@
+/* Ensure all cards have the same height */
+.card-custom {
+    height: 100%; 
+    position: relative;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-overlay {
+    position: relative;
+  }
+  
+  .card-overlay img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    transform: translateY(100%);
+  }
+  
+  /* Hover effect - slide up overlay and show text */
+  .card-overlay:hover .overlay-content {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .overlay-content h5 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .overlay-content p {
+    font-size: 16px;
+  }
+  
+  .filter-item {
+    display: none; /* Hide items initially */
+  }
+  
